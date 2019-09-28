@@ -1,0 +1,151 @@
+[debug] [2019-09-28T09:49:12.178Z] ----------------------------------------------------------------------
+[debug] [2019-09-28T09:49:12.182Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\vuong\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve --only hosting,functions
+[debug] [2019-09-28T09:49:12.183Z] CLI Version:   7.4.0
+[debug] [2019-09-28T09:49:12.183Z] Platform:      win32
+[debug] [2019-09-28T09:49:12.183Z] Node Version:  v10.16.3
+[debug] [2019-09-28T09:49:12.184Z] Time:          Sat Sep 28 2019 16:49:12 GMT+0700 (Indochina Time)
+[debug] [2019-09-28T09:49:12.184Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-09-28T09:49:12.198Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-09-28T09:49:12.199Z] > authorizing via signed-in user
+[debug] [2019-09-28T09:49:12.200Z] [iam] checking project apishop for permissions ["firebase.projects.get"]
+[debug] [2019-09-28T09:49:12.202Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/apishop:testIamPermissions  
+
+[debug] [2019-09-28T09:49:13.311Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-28T09:49:13.314Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/apishop  
+ 
+[debug] [2019-09-28T09:49:15.068Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-28T09:49:15.072Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/apishop/webApps/-/config  
+ 
+[info] +  functions: Using node@10 from host.
+[info] +  functions: Emulator started at http://localhost:5001
+[debug] [2019-09-28T09:49:16.105Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "F:\firebase-user-role-api\functions" for Cloud Functions...
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2019-09-28T09:49:16.856Z] [runtime-status] Functions runtime initialized. {"cwd":"F:\\firebase-user-role-api\\functions","node_version":"10.16.3"}
+[debug] [2019-09-28T09:49:16.856Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-28T09:49:16.860Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.2.0","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-09-28T09:49:16.862Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to F:\firebase-user-role-api\apishop-firebase-adminsdk-gtngh-88c8b52049.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-09-28T09:49:16.865Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[info] +  functions[api]: http function initialized (http://localhost:5001/apishop/us-central1/api).
+[info] [hosting] Rewriting /users to http://localhost:5001/apishop/us-central1/api for local Function api
+[info] [hosting] Rewriting /users/s3AoYK1nRoRNeNN1ekZb4aG7bek1 to http://localhost:5001/apishop/us-central1/api for local Function api
+[info] [hosting] Rewriting /users/s3AoYK1nRoRNeNN1ekZb4aG7bek1 to http://localhost:5001/apishop/us-central1/api for local Function api
+[debug] [2019-09-28T09:49:22.149Z] Accepted request OPTIONS /apishop/us-central1/api/users --> api
+[debug] [2019-09-28T09:49:22.155Z] Accepted request OPTIONS /apishop/us-central1/api/users/s3AoYK1nRoRNeNN1ekZb4aG7bek1 --> api
+[debug] [2019-09-28T09:49:22.161Z] Accepted request OPTIONS /apishop/us-central1/api/users/s3AoYK1nRoRNeNN1ekZb4aG7bek1 --> api
+[debug] [2019-09-28T09:49:23.151Z] [runtime-status] Functions runtime initialized. {"cwd":"F:\\firebase-user-role-api\\functions","node_version":"10.16.3"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-09-28T09:49:23.153Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-28T09:49:23.156Z] [runtime-status] Functions runtime initialized. {"cwd":"F:\\firebase-user-role-api\\functions","node_version":"10.16.3"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-09-28T09:49:23.159Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-28T09:49:23.159Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.2.0","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-09-28T09:49:23.162Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to F:\firebase-user-role-api\apishop-firebase-adminsdk-gtngh-88c8b52049.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-09-28T09:49:23.165Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-28T09:49:23.167Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.2.0","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-09-28T09:49:23.169Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to F:\firebase-user-role-api\apishop-firebase-adminsdk-gtngh-88c8b52049.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-09-28T09:49:23.172Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-28T09:49:23.220Z] [runtime-status] Functions runtime initialized. {"cwd":"F:\\firebase-user-role-api\\functions","node_version":"10.16.3"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-09-28T09:49:23.223Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-28T09:49:23.229Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.2.0","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-09-28T09:49:23.233Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to F:\firebase-user-role-api\apishop-firebase-adminsdk-gtngh-88c8b52049.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-09-28T09:49:23.235Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-28T09:49:23.752Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-09-28T09:49:23.752Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-09-28T09:49:23.753Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-09-28T09:49:23.762Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-09-28T09:49:23.762Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-09-28T09:49:23.763Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-09-28T09:49:23.767Z] {"socketPath":"\\\\?\\pipe\\F:\\firebase-user-role-api\\functions\\8648"}
+[debug] [2019-09-28T09:49:23.773Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\F:\\firebase-user-role-api\\functions\\8648"}
+[debug] [2019-09-28T09:49:23.779Z] {"socketPath":"\\\\?\\pipe\\F:\\firebase-user-role-api\\functions\\10064"}
+[debug] [2019-09-28T09:49:23.782Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\F:\\firebase-user-role-api\\functions\\10064"}
+[debug] [2019-09-28T09:49:23.788Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-09-28T09:49:23.794Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-09-28T09:49:23.798Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-09-28T09:49:23.815Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[info] [hosting] Rewriting /users/s3AoYK1nRoRNeNN1ekZb4aG7bek1 to http://localhost:5001/apishop/us-central1/api for local Function api
+[debug] [2019-09-28T09:49:23.848Z] Accepted request GET /apishop/us-central1/api/users/s3AoYK1nRoRNeNN1ekZb4aG7bek1 --> api
+[info] [hosting] Rewriting /users to http://localhost:5001/apishop/us-central1/api for local Function api
+[debug] [2019-09-28T09:49:23.860Z] Accepted request GET /apishop/us-central1/api/users --> api
+[debug] [2019-09-28T09:49:23.883Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-09-28T09:49:23.883Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-09-28T09:49:23.883Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-09-28T09:49:23.903Z] {"socketPath":"\\\\?\\pipe\\F:\\firebase-user-role-api\\functions\\4944"}
+[debug] [2019-09-28T09:49:23.906Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\F:\\firebase-user-role-api\\functions\\4944"}
+[debug] [2019-09-28T09:49:23.921Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-09-28T09:49:23.943Z] [runtime-status] Ephemeral server survived. {}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-09-28T09:49:24.743Z] [runtime-status] Functions runtime initialized. {"cwd":"F:\\firebase-user-role-api\\functions","node_version":"10.16.3"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-09-28T09:49:24.746Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-28T09:49:24.751Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.2.0","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-09-28T09:49:24.751Z] [runtime-status] Functions runtime initialized. {"cwd":"F:\\firebase-user-role-api\\functions","node_version":"10.16.3"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-09-28T09:49:24.754Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-28T09:49:24.755Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to F:\firebase-user-role-api\apishop-firebase-adminsdk-gtngh-88c8b52049.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-09-28T09:49:24.758Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-28T09:49:24.761Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.2.0","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-09-28T09:49:24.764Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to F:\firebase-user-role-api\apishop-firebase-adminsdk-gtngh-88c8b52049.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-09-28T09:49:24.767Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-28T09:49:25.316Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-09-28T09:49:25.317Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-09-28T09:49:25.317Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-09-28T09:49:25.327Z] {"socketPath":"\\\\?\\pipe\\F:\\firebase-user-role-api\\functions\\6456"}
+[debug] [2019-09-28T09:49:25.329Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\F:\\firebase-user-role-api\\functions\\6456"}
+[debug] [2019-09-28T09:49:25.339Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-09-28T09:49:25.347Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-09-28T09:49:25.347Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-09-28T09:49:25.347Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-09-28T09:49:25.357Z] {"socketPath":"\\\\?\\pipe\\F:\\firebase-user-role-api\\functions\\11036"}
+[debug] [2019-09-28T09:49:25.359Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\F:\\firebase-user-role-api\\functions\\11036"}
+[debug] [2019-09-28T09:49:25.369Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-09-28T09:49:25.464Z] [runtime-status] Ephemeral server survived. {}
+[debug] [2019-09-28T09:49:25.490Z] [runtime-status] Ephemeral server survived. {}
+[info] >  decodedToken {"iss":"https://securetoken.google.com/apishop","aud":"apishop","auth_time":1569664077,"user_id":"s3AoYK1nRoRNeNN1ekZb4aG7bek1","sub":"s3AoYK1nRoRNeNN1ekZb4aG7bek1","iat":1569664077,"exp":1569667677,"email":"joaq@cid.com","email_verified":false,"firebase":{"identities":{"email":["joaq@cid.com"]},"sign_in_provider":"password"},"uid":"s3AoYK1nRoRNeNN1ekZb4aG7bek1"}
+[info] >  decodedToken {"iss":"https://securetoken.google.com/apishop","aud":"apishop","auth_time":1569664077,"user_id":"s3AoYK1nRoRNeNN1ekZb4aG7bek1","sub":"s3AoYK1nRoRNeNN1ekZb4aG7bek1","iat":1569664077,"exp":1569667677,"email":"joaq@cid.com","email_verified":false,"firebase":{"identities":{"email":["joaq@cid.com"]},"sign_in_provider":"password"},"uid":"s3AoYK1nRoRNeNN1ekZb4aG7bek1"}
+[info] i  functions: Finished "api" in ~1s
+[info] i  functions: Finished "api" in ~2s
+[info] [hosting] Rewriting /users/s3AoYK1nRoRNeNN1ekZb4aG7bek1 to http://localhost:5001/apishop/us-central1/api for local Function api
+[debug] [2019-09-28T09:49:27.357Z] Accepted request GET /apishop/us-central1/api/users/s3AoYK1nRoRNeNN1ekZb4aG7bek1 --> api
+[debug] [2019-09-28T09:49:28.041Z] [runtime-status] Functions runtime initialized. {"cwd":"F:\\firebase-user-role-api\\functions","node_version":"10.16.3"}
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-09-28T09:49:28.043Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-28T09:49:28.047Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.2.0","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-09-28T09:49:28.049Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to F:\firebase-user-role-api\apishop-firebase-adminsdk-gtngh-88c8b52049.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-09-28T09:49:28.051Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-28T09:49:28.464Z] [runtime-status] Trigger "api" has been found, beginning invocation! {}
+[debug] [2019-09-28T09:49:28.465Z] [runtime-status]  {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-09-28T09:49:28.465Z] [runtime-status] Running api in mode HTTPS {}
+[debug] [2019-09-28T09:49:28.474Z] {"socketPath":"\\\\?\\pipe\\F:\\firebase-user-role-api\\functions\\16316"}
+[debug] [2019-09-28T09:49:28.476Z] [functions] Runtime ready! Sending request! {"socketPath":"\\\\?\\pipe\\F:\\firebase-user-role-api\\functions\\16316"}
+[debug] [2019-09-28T09:49:28.485Z] [runtime-status] Ephemeral server used! {}
+[debug] [2019-09-28T09:49:28.583Z] [runtime-status] Ephemeral server survived. {}
+[info] >  decodedToken {"iss":"https://securetoken.google.com/apishop","aud":"apishop","auth_time":1569664077,"user_id":"s3AoYK1nRoRNeNN1ekZb4aG7bek1","sub":"s3AoYK1nRoRNeNN1ekZb4aG7bek1","iat":1569664077,"exp":1569667677,"email":"joaq@cid.com","email_verified":false,"firebase":{"identities":{"email":["joaq@cid.com"]},"sign_in_provider":"password"},"uid":"s3AoYK1nRoRNeNN1ekZb4aG7bek1"}
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-09-28T09:51:55.759Z] File F:\firebase-user-role-api\functions\src\invoice\routes-config.ts changed, reloading triggers
+[debug] [2019-09-28T09:51:57.920Z] [runtime-status] Functions runtime initialized. {"cwd":"F:\\firebase-user-role-api\\functions","node_version":"10.16.3"}
+[debug] [2019-09-28T09:51:57.920Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-28T09:51:57.925Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.2.0","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-09-28T09:51:57.928Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to F:\firebase-user-role-api\apishop-firebase-adminsdk-gtngh-88c8b52049.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-09-28T09:51:57.930Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2019-09-28T09:52:08.628Z] File F:\firebase-user-role-api\functions\src\invoice\controller.ts changed, reloading triggers
+[debug] [2019-09-28T09:52:10.543Z] [runtime-status] Functions runtime initialized. {"cwd":"F:\\firebase-user-role-api\\functions","node_version":"10.16.3"}
+[debug] [2019-09-28T09:52:10.543Z] [runtime-status] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true} {}
+[debug] [2019-09-28T09:52:10.547Z] [runtime-status] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.2.0","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2019-09-28T09:52:10.549Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[warn] !  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to F:\firebase-user-role-api\apishop-firebase-adminsdk-gtngh-88c8b52049.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2019-09-28T09:52:10.553Z] [runtime-status] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.0.2","resolution":"F:\\firebase-user-role-api\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
