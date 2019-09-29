@@ -8,7 +8,10 @@ import * as bodyParser from 'body-parser';
 
 export function users() {
     const app = express();
-    app.use(bodyParser.json());
+    const main = express();
+    main.use('/auth', app);
+    main.use(bodyParser.json());
+    main.use(bodyParser.urlencoded({ extended: false }));
     app.use(cors({ origin: true }));
 
     app.post('/users',
@@ -36,5 +39,5 @@ export function users() {
         isAuthorized({ hasRole: ['admin', 'manager'], allowSameUser: true }),
         remove
     ]);
-    return functions.https.onRequest(app)
+    return functions.https.onRequest(main)
 }

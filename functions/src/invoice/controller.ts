@@ -1,89 +1,69 @@
 import { Request, Response } from "express";
-import * as admin from 'firebase-admin'
+import * as admin from 'firebase-admin';
+const tauist = require('tauist');
+const Treasury = require('treasury');
 
-export async function create(req: Request, res: Response) {
-    try {
-        const { displayName, password, email, role } = req.body
+const treasury = new Treasury({
+    ttl: tauist.ms.thirtyMinutes
+});
 
-        if (!displayName || !password || !email || !role) {
-            return res.status(400).send({ 
-                message: 'Missing fields',
-                displayName: displayName,
-                password: password,
-                email: email,
-                role: role
-         })
-        }
-
-        const { uid } = await admin.auth().createUser({
-            displayName,
-            password,
-            email
+async function  getAllData() {
+    // replace this with your actual Promise code doing the "real work" that you want to cache
+    console.log("getalldata");
+    return new Promise((resolve, reject) => {
+        const db = admin.firestore();
+        let stuff: any = [];
+        db.collection("stores").get().then(snapshot => {
+            snapshot.forEach(doc => {
+                const newelement = {
+                    "id": doc.id,
+                    "name": doc.data().name,
+                }
+                stuff = stuff.concat(newelement);
+            });
+            console.log(stuff);
+            resolve(stuff);
+        }).catch(err => {
+            reject("err" + err);
         })
-        await admin.auth().setCustomUserClaims(uid, { role })
-
-        return res.status(201).send({ uid })
-    } catch (err) {
-        return handleError(res, err)
-    }
+    });
 }
 
 export async function all(req: Request, res: Response) {
     try {
-        const listUsers = await admin.auth().listUsers()
-        const users = listUsers.users.map(user => {
-            const customClaims = (user.customClaims || { role: '' }) as { role?: string }
-            const role = customClaims.role ? customClaims.role : ''
-            return {
-                uid: user.uid,
-                email: user.email,
-                displayName: user.displayName,
-                role,
-                lastSignInTime: user.metadata.lastSignInTime,
-                creationTime: user.metadata.creationTime
-            }
-        })
 
-        return res.status(200).send({ users })
-    } catch (err) {
-        return handleError(res, err)
+        res.set('Cache-Control', `public, max-age=${tauist.s.thirtyMinutes}, s-maxage=${tauist.s.thirtyMinutes}`);
+
+        treasury.invest(getAllData, {})
+            .then((data:any) => {
+                console.log("data");
+                console.log(data);
+                res.status(200).send(data);
+            })
+            .catch((error:any) => {
+                console.error('error caught:', error);
+                res.status(500).send('Internal Server Error');
+            });
+
+
+        // const db = admin.firestore();
+        // let stuff: any = [];
+        // await db.collection("stores").get().then(snapshot => {
+        //     snapshot.forEach(doc => {
+        //         const newelement = {
+        //             "id": doc.id,
+        //             "name": doc.data().name,
+        //         }
+        //         stuff = stuff.concat(newelement);
+        //     });
+        //     console.log(stuff);
+        //     res.send(stuff);
+        // }).catch((err:any) => {
+        //     res.send("err" + err);
+        // })
+        return "";
     }
-}
-
-export async function get(req: Request, res: Response) {
-    try {
-        const { id } = req.params
-        const user = await admin.auth().getUser(id)
-        return res.status(200).send({ user })
-    } catch (err) {
-        return handleError(res, err)
-    }
-}
-
-export async function patch(req: Request, res: Response) {
-    try {
-        const { id } = req.params
-        const { displayName, password, email, role } = req.body
-
-        if (!id || !displayName || !password || !email || !role) {
-            return res.status(400).send({ message: 'Missing fields' })
-        }
-
-        const user = await admin.auth().updateUser(id, { displayName, password, email })
-        await admin.auth().setCustomUserClaims(id, { role })
-        return res.status(204).send({ user })
-    } catch (err) {
-        return handleError(res, err)
-    }
-}
-
-export async function remove(req: Request, res: Response) {
-    try {
-        const { id } = req.params
-
-        await admin.auth().deleteUser(id)
-        return res.status(204).send({})
-    } catch (err) {
+    catch (err) {
         return handleError(res, err)
     }
 }

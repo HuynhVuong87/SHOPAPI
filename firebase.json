@@ -14,8 +14,12 @@
     ],
     "rewrites": [
       {
-        "source": "**",
-        "function": "api"
+        "source": "/auth/**",
+        "function": "usersApi"
+      },
+      {
+        "source": "/invoice/**",
+        "function": "invoiceApi"
       }
     ]
   }
